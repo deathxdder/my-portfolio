@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="src/styles/main.css">
+  <link rel="stylesheet" href="src/styles/adaptive.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="header__card">
+        <div class="header__card-content">
+          <i class="header__icon" data-lucide="clock"></i>
+          <div>
+            <div id="time" class="text-lg font-mono">00:00:00</div>
+            <div id="timezone" class="text-sm text-gray-500">UTC+0</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="header__card">
+        <div class="header__card-content">
+          <i class="header__icon" data-lucide="calendar"></i>
+          <div>
+            <div id="date" class="text-lg font-mono">1 January</div>
+            <div id="year" class="text-sm text-gray-500">2025</div>
+          </div>
+        </div>
+      </div>
+
+    </header>
+
+    <section class="profile">
+      <div class="profile__content">
+        <div class="profile__image">
+          <img src="./src/images/avatar.jpg" alt="Profile">
+        </div>
+
+        <div class="profile__info">
+          <h1 class="profile__title">
+            Hello! I'm <span style="color: #34d399;">@deathxdder</span>
+          </h1>
+
+          <div class="profile__tags">
+            <span class="profile__tag">TypeScript</span>
+            <span class="profile__tag">Vue</span>
+            <span class="profile__tag">TypeScript</span>
+            <span class="profile__tag">TypeScript</span>
+          </div>
+
+          <p class="profile__description">
+            I'm a fullstack developer specializing in TypeScript, Vue, and Nuxt.
+            With a passion for creating beautiful and functional web applications,
+            I enjoy building modern frontends and robust backends.
+            Available for freelance work and open to collaboration on interesting projects.
+          </p>
+
+          <div class="social__links">
+            <a href="#" class="social__link">
+              <i data-lucide="github"></i>
+            </a>
+            <a href="#" class="social__link">
+              <i data-lucide="twitter"></i>
+            </a>
+            <a href="#" class="social__link">
+              <i data-lucide="linkedin"></i>
+            </a>
+            <a href="#" class="social__link">
+              <i data-lucide="mail"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="projects">
+      <div class="projects__header">
+        <h2 class="projects__title">Projects</h2>
+
+        <div class="projects__filters">
+          <button class="filter__button active" data-filter="all">All</button>
+          <button class="filter__button" data-filter="completed">Completed</button>
+          <button class="filter__button" data-filter="in-progress">In Progress</button>
+          <button class="filter__button" data-filter="frozen">Frozen</button>
+        </div>
+      </div>
+
+      <div class="projects__grid">
+        <!-- Project Cards will be dynamically inserted here -->
+      </div>
+    </section>
+
+    <section class="skills">
+      <h2 class="skills__title">Skills</h2>
+
+      <div class="skills__grid">
+        <div class="skills__card">
+          <h3 class="skills__card-title">
+            <i data-lucide="code" style="color: #34d399;"></i>
+            Active Skills
+          </h3>
+
+          <div class="skills__list">
+            <!-- Active skills will be dynamically inserted here -->
+          </div>
+        </div>
+
+        <div class="skills__card">
+          <h3 class="skills__card-title">
+            <i data-lucide="book-open" style="color: #34d399;"></i>
+            Learning
+          </h3>
+
+          <div class="skills__list">
+            <!-- Learning skills will be dynamically inserted here -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer__content">
+        <p class="footer__text">
+          &copy; <span id="currentYear">2025</span> deathxdder. All rights reserved.
+        </p>
+
+        <div class="footer__buttons">
+          <button class="footer__button" id="themeToggle">
+            <i data-lucide="sun"></i>
+            <span>Light</span>
+          </button>
+
+          <button class="footer__button">
+            <i data-lucide="globe"></i>
+            <span>EN</span>
+          </button>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="src/js/script.js"></script>
+</body>
+
+</html>

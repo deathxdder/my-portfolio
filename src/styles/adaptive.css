@@ -1,0 +1,189 @@
+/* Mobile-first responsive styles */
+
+/* Base styles (mobile) */
+.container {
+  padding: 1rem;
+}
+
+.header {
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+}
+
+.profile__content {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+}
+
+.profile__image {
+  width: 96px;
+  height: 96px;
+}
+
+.profile__title {
+  font-size: 1.5rem;
+}
+
+.social__links {
+  justify-content: center;
+}
+
+.projects__header {
+  flex-direction: column;
+  gap: 1rem;
+  align-items: stretch;
+}
+
+.projects__filters {
+  overflow-x: auto;
+  padding: 0.5rem;
+  -webkit-overflow-scrolling: touch;
+}
+
+.projects__grid {
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.footer__content {
+  flex-direction: column;
+  gap: 1rem;
+  text-align: center;
+}
+
+/* Tablet (640px and up) */
+@media (min-width: 640px) {
+  .container {
+    padding: 1.5rem;
+  }
+
+  .header {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .profile__image {
+    width: 112px;
+    height: 112px;
+  }
+
+  .profile__title {
+    font-size: 1.75rem;
+  }
+
+  .projects__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Laptop (768px and up) */
+@media (min-width: 768px) {
+  .container {
+    padding: 2rem;
+  }
+
+  .header {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  .profile__content {
+    flex-direction: row;
+    text-align: left;
+    gap: 1.5rem;
+  }
+
+  .profile__image {
+    width: 128px;
+    height: 128px;
+  }
+
+  .social__links {
+    justify-content: flex-start;
+  }
+
+  .projects__header {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .footer__content {
+    flex-direction: row;
+    text-align: left;
+  }
+}
+
+/* Desktop (1024px and up) */
+@media (min-width: 1024px) {
+  .container {
+    padding: 2rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .projects__grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+/* Large screens (1280px and up) */
+@media (min-width: 1280px) {
+  .container {
+    padding: 2.5rem 1rem;
+  }
+
+  .profile__content {
+    gap: 2rem;
+  }
+
+  .profile-image {
+    width: 144px;
+    height: 144px;
+  }
+}
+
+/* Touch device optimizations */
+@media (hover: none) {
+  .project__card:hover {
+    transform: none;
+  }
+
+  .project__image img:hover {
+    transform: none;
+  }
+}
+
+/* Dark mode optimizations */
+@media (prefers-color-scheme: dark) {
+
+  .header__card,
+  .profile,
+  .project__card,
+  .skills__card {
+    backdrop-filter: blur(12px);
+  }
+}
+
+/* Print styles */
+@media print {
+  .container {
+    max-width: none;
+    padding: 0;
+  }
+
+  .header,
+  .footer__buttons,
+  .project__links {
+    display: none;
+  }
+
+  .profile,
+  .project__card,
+  .skills__card {
+    break-inside: avoid;
+    background: none;
+    border: 1px solid #ddd;
+  }
+}
